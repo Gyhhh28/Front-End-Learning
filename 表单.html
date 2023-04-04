@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="demo.php" method="get" name="name1" >
+    username:<input type="text" name="username" value='enter here'> <br>
+    <!--name和value每个元素都要有 但是只在文本框里面显示-->
+    password:<input type="password" name="pswd"> <br>
+    sex: men <input type="radio" name="sex" checked='checked'> women <input type="radio" name="sex"> <br>
+    <!--radio多选一 要相同name下才能选一 否则多选-->
+    吃饭 <input type="checkbox"> 骂人 <input type="checkbox"> 骂中国人 <input type="checkbox"> <br>
+    <!--checked='checked'默认打开页面就选--> 
+    <input type="radio" checked="checked">本人默认中国人全鼠了
+
+    <input type="submit" value="紫砂"> <br>
+    <!-- 提交里面的内容在value修改 默认‘提交’ -->
+    <input type="reset" value="重新填写"> <br>
+    <!-- 重置内容 -->
+    <input type="button" value="获取验证码"> <br>
+    <!-- 普通按钮 和js配合使用 -->
+    上传头像 <input type="file">
+</form>
+</body>
+</html>

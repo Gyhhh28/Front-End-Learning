@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#border1 {
+    border: 10px solid blue
+    /*border的合并写法*/
+}
+#border2 {
+    border: 1px dashed red 
+    /*border的合并写法*/
+}
+#border-style1 {
+    border-style: dotted solid double dashed
+    /*上 右 下 左*/
+}
+#p1 {
+    border-top: dotted; border-right: solid; border-bottom: double; border-left: dashed;
+    /*和style1两种写法等效*/
+    border-width: thick;
+    /*一次性设置四个边框*/
+}
+#p2 {
+    border-style: dashed;
+    border-width: 15px 5px 1px 10px;/*也是上右下左顺序*/
+}
+</style>
+</head>
+<body>
+<div id="border1">
+    双击666老铁
+</div>
+<div id="border2">
+    双击666老铁
+</div>
+<div id="border-style1">
+    你挺牛啊
+</div>
+<p id="p1">
+    没毛病家人
+</p>
+<p id='p2'>你挺呢啊</p>
+</body>
+</html>
