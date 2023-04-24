@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 利用子元素选择器把div的子元素a变色 */
+        #b1 > a {
+            color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <div id="b1">
+        <a href="#">我是血统纯正的子元素</a>
+        <span><a href="#">我不是div的子元素</a></span>
+        <!-- 这个a是span的子元素  -->
+    </div>
+</body>
+</html>

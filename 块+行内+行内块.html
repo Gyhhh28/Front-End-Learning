@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: aqua;
+        }
+        span {
+            background-color: salmon;
+            /*从bg颜色可以看出块默认宽度铺满而行内随内容*/
+        }
+        input {
+            width: 300px;
+            height: 600px;
+        }  
+        /* 行内块元素可改变宽高 */
+    </style>
+</head>
+<body>
+    <div>
+        很崩溃我居然占了一行
+    </div>
+    <span>我是你爹</span><span>我俩可以在一行</span>
+    <!-- 行内多个可以在一行里面 -->
+    <br>
+    <input type="text"><input type="text">
+    <!-- 行内块元素也可以显示在一行 -->
+</body>
+</html>

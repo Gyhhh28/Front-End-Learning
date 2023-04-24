@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /* 可以选择父元素里的子元素 对其进行样式修改 
+        嵌套在外的标签是父 里面子 
+        格式： f s {} */
+        ol li {
+            color: #6A5ACD;
+        }
+        /* 把ol里的li变成紫色 */
+        ul li a {
+            color: 	#87CEEB;
+            /* 此时ul的li里的a就进行了单独的变色 */
+        }
+        .change li {
+            color: 	#9400D3;
+        }
+        /* 只对第二个ul表里的li改变 为了区分第一个ul 
+        定义了一个新类 change类指代第二个ul */
+    </style>
+</head>
+<body>
+    <ol>
+        <li>i am son of ol</li>
+        <li>i am son of ol</li>
+        <li>i am son of ol</li>
+    </ol>
+    <ul>
+        <li>i am son of ul</li>
+        <li>i am son of ul</li>
+        <li><a href="#">i am son son of ul</a></li>
+    </ul>
+    <ul class="change">
+        <li>i am son of ul</li>
+        <li>i am son of ul</li>
+        <li><a href="#">i am son son of ul</a></li>
+    </ul>
+</body>
+</html>

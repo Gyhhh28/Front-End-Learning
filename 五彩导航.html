@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav a {
+            display: inline-block;
+            width: 120px;
+            height: 58px;
+            line-height: 48px;
+            /* 因为图片不是一个四四方方的盒子
+            文字偏下 所以行高小一点让文字偏上 */
+            background-color: aqua;
+            text-align: center;
+
+        }
+        .nav .bg1 {
+            background: url(images/bg1.png);
+        }
+        .nav .bg1:hover {
+            background-image: url(images/bg11.png);
+        }
+        .nav .bg2 {
+            background: url(images/bg2.png);
+        }
+        .nav .bg2:hover {
+            background-image: url(images/bg22.png);
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <a hreef="#" class="bg1">五彩导航</a>
+    <a hreef="#" class="bg2">五彩导航</a>
+    <a hreef="#">五彩导航</a>
+    <a hreef="#">五彩导航</a>
+    <a hreef="#">五彩导航</a>
+</div>
+</body>
+</html>
+<!-- key point 1. 用链接但是要宽高 需要变性 
+    注意 既要宽高又要在同一行 所以不是变成块 而是行内块
+2.盒子里文字水平垂直居中
+3.链接有背景图片
+4.伪类选择器 -->

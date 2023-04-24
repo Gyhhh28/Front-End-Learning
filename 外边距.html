@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin: 80px 0 0 0;
+            /* 目标是能让内盒的上边距和外盒拉开距离
+            但是不但没有拉开
+            反而两个盒子一起和浏览器上边距有了距离
+            这是嵌套元素塌陷问题 */
+        }
+        /* 解决办法 为父元素加上overflow: hidden */
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+        </div>
+    </div>
+    <br>
+    <div id="box1">
+        <div class="box2">
+        </div>
+    </div>
+</body>
+</html>

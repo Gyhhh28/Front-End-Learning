@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fud {
+            width: 200px;
+            height: 200px;
+            float: right;
+            background-color: aquamarine;
+        }
+        /* 添加了float属性后 三个块不知羞耻地粘在一行
+        我们之前说的块元素独占一行 */
+        span {
+            float: left;
+            background-color: salmon;
+            width: 200px;
+            height: 200px;
+        }
+        /* 行元素添加了浮动之后具有了块元素的特性
+        可以设置宽高 */
+    </style>
+</head>
+<body>
+    <div class="fud"></div>
+    <div class="fud"></div>
+    <div class="fud"></div>
+    <span></span>
+</body>
+</html>
