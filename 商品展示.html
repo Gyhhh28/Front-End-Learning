@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f5f5f5;
+        }
+        .box {
+            width: 298px;
+            height: 415px;
+            background-color: #fff;
+            margin: 100px auto; /*块级元素水平居中*/
+        }
+        .box img {
+            width: 100%;
+            /* 让图片宽度和盒子一样 */
+        }
+        .review {
+            height: 70px;
+            font-size: 14px;
+            /* p行内没有width属性 padding不会撑开盒子 */
+            padding: 0 28px;
+            margin-top: 30px;
+            /* 不用padding 因为已经有height 会撑开 */
+        }
+
+        .appraise {
+            font-size: 12px;
+            color: #b0b0b0;
+            margin-top: 20px;
+            padding: 0 28px;
+        }
+        .info {
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 0 28px;
+        }
+        .info h4{
+            display: inline-block;
+            /* 标题是块元素 和99不在一行了 */
+            font-weight: 400;
+            /* 标题自动加粗了 不要这个加粗 */
+        }
+        .info span {
+            color: #ff6700 ;
+        }
+        .info em {
+            font-style: normal;
+            /* 取消斜体 */
+            color: #ebe4e0;
+            margin: 0 6px 0 15px;
+        }
+        .info a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="images/img.jpg" alt="">
+        <p class="review">好很好非常好好很好非常好好很好非常好好很好非常好好很好非常好</p>
+        <div class="appraise">来自用户0735的评价</div>
+        <div class="info">
+            <h4><a href="#">redmi无线蓝牙耳机...</a></h4>
+            <em>|</em>
+            <span>99.9元</span>
+        </div>
+    </div>
+</body>
+</html>

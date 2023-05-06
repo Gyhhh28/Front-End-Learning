@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            margin: 0 auto;
+            background-color: gray;
+            /* overflow: hidden; */
+        }
+
+        .one {
+            width: 70px;
+            height: 90px;
+            background-color: palegreen;
+            float: left;
+        }
+
+        .two {
+            width: 70px;
+            height: 90px;
+            background-color: darkcyan;
+            float: left;
+        }
+
+        .footer {
+            height: 20px;
+            background-color: blue;
+        }
+        /*给12加了浮动之后 footer跑到12下面了
+        正是因为父亲没有高度 只靠孩子撑开
+        所以当孩子起飞 父亲就瘪了*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="one"></div>
+        <div class="two"></div>
+    </div>
+    <div class="footer"></div>
+    
+</body>
+</html>

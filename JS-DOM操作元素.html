@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button>123</button>
+    <div>
+        <p>
+            wordwordword
+        </p>
+    </div> -->
+
+    <!-- <button>操作属性</button>
+    <div id="box">div tag</div>
+    <input type="password"> -->
+
+    <button>操作zdy属性</button>
+    <div id="box" hello="world">div tag</div>
+    <!-- 自定义了一个hello属性 -->
+
+    <script>
+
+    // //操作文本内容
+    //     //get element
+    //     var ele = document.querySelector('div')
+    //     var btn = document.querySelector('button')
+    //     //获取元素的文本内容
+    //     console.log(ele.innerText);
+        
+    //     //给button绑定事件
+    //     btn.onclick = function () {
+    //         ele.innerText = 'newtext'
+    //         //设置div内文本内容
+    //     }
+    
+    // //操作超文本内容
+    //     //get element
+    //     var ele = document.querySelector('div')
+    //     var btn = document.querySelector('button')
+
+    //     console.log(ele.innerHTML);
+
+    //     btn.onclick = function() {
+    //         ele.innerHTML = '<span>newcontent</span>'
+    //     }
+        
+
+    //操作属性
+        //操作原生属性
+        // var box = document.querySelector('div')
+        // var inp = document.querySelector('input')
+        // var btn = document.querySelector('button')
+        // console.log(box.id);
+        // console.log(inp.type);
+
+        // btn.onclick = function () {
+        //     // change attribute of Element
+        //     box.id = 'content'
+        //     inp.type = 'checkbox'
+        // }//点击按钮之后打开元素台 会发现div和input的属性变了
+        
+        //操作自定义属性
+        var ele = document.querySelector('div')
+        var btn = document.querySelector('button')
+        //获取自定义属性
+        var res = box.getAttribute('hello')
+        console.log(res);
+        btn.onclick = function() {
+            box.setAttribute('hello','bye bitch')
+            //把hello属性设置成byebitch
+        }
+        box.removeAttribute('hello')
+        //delete attribute
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>one</div>
+    <div class="box">two</div>
+    <div class="box content">three</div>
+    <div class="box" id="container">4</div>
+
+    <script>
+    //根据id获取元素 并把返回值赋值给ele
+        var ele = document.getElementById('container')
+        // var ele = document.getElementById('abc')
+        //如果有这个元素 会输出 没有则返回null
+        console.log(ele)
+
+    //根据类名获取元素
+        var eles= document.getElementsByClassName('box')
+        console.log(eles)
+        //返回一个伪数组
+        var els2 = document.getElementsByClassName('content')
+        //只有一个元素符合也可以返回
+        console.log(els2)
+        var els3 = document.getElementsByClassName('abc')
+        console.log(els3);
+        //没有符合的 输出空的伪数组
+        //注意这里是elements复数 因为多个元素可以是同类但id只有一个
+    
+    //根据标签名 返回原理和类名相同 伪数组
+        var eles = document.getElementsByTagName('div')
+        console.log(eles)
+
+    //根据选择器名 只获取符合条件的第一个
+        var ele = document.querySelector('.box')
+        console.log(ele);
+        //only return the first one
+        var ele = document.querySelector('div')
+        console.log(ele);
+        
+    //根据选择器 获取一组
+    //return 伪数组
+        var eles = document.querySelectorAll('div')    
+        console.log(eles);
+        var eles = document.querySelectorAll('aaaa')
+        console.log(eles);
+        //依旧是不存在就返回空伪数组
+
+    </script>
+
+</body>
+</html>

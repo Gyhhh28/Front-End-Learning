@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {width: 600px;}
+    </style>
+</head>
+<body>
+    <h1>欢迎进入聊天室</h1>
+    <input type="text" id="txt">
+    <button onclick="send()">发送</button>
+
+    <!-- 匹配后端接口 -->
+<script src="http://wulv5.com/js/socket.io.min.js"></script>
+<script>
+    //socket前端借口 用来在客户端接受和发送消息   
+    var socket = io.connect('/')//连接到后端接口
+    function send(){
+        //获取文本框输入内容
+        var txt = document.getElementById('txt')
+        socket.send(txt.value)
+        txt.value = ' '
+    }
+
+    socket.on('message',function(msg){
+        console.log(msg);
+        
+    })
+</script>
+</body>
+
+</html>

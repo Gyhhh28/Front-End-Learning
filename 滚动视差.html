@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        #container{
+            width: 100vw;
+            height: auto;
+
+        }
+        section{
+            height: 100vh;
+            background: black;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img{
+            background-size: auto;
+            overflow: hidden;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            max-width: 100%;
+            user-select: none;
+            cursor: default;
+        }
+        #img1{
+            background-image: url(images/flow.JPG);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <section id="img1" class="img">img1</section>
+        <section id="content1">content1</section>
+        <section id="img2" class="img">img2</section>
+        <section id="content2">content2</section>
+        <section id="img3" class="img">img3</section>
+        <section id="footer">footer</section>
+
+    </div>
+</body>
+</html>

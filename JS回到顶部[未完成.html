@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 3000px;
+            /* 大于窗口高度才能有滚动 */
+        }
+
+        .header {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #fff;
+            background-color: skyblue;
+
+            position: fixed;
+            top: -80px;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">顶部通道</div>
+    <div class="goTop">回到顶部</div>
+</body>
+</html>

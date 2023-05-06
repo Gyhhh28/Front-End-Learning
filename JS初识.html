@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="test.js"></script>
+</head>
+<body>
+    <script>
+        console.log('hi') 
+console.error('here is an error')
+
+/*声明方式 let,const
+let可重新赋值变量 const表示该变量不可变 否则报错*/  //多行注释
+let age = 30
+age = 31;
+
+console.log(age)
+
+// data types
+const name1 = 'anwen'
+const age2 = 30
+const rating = 4.5
+const x = null
+
+console.log(typeof name1)
+
+//模板字符串
+const hello = `my name is ${name1} and i am ${age}` //是反引号
+console.log(hello);
+
+const s1 = 'i am your dad'
+const s2 = 'DADDY'
+console.log(s1.length)
+console.log(s1.toUpperCase())//大小写 
+console.log(s2.toLowerCase())
+console.log(s1.substring(0,3))//截取part
+console.log(s2.split(''))
+
+//Array
+const number = new Array(1,2,8);
+console.log(number)
+
+const fruits = ['apple','banana']
+fruits[2] = 'pear'//知道长度的情况下可以用
+fruits.push('mango')//不知道的情况下在尾部加
+fruits.unshift('watermelon')//头部
+console.log(fruits)
+fruits.pop()
+console.log(fruits)
+console.log(fruits[1])//访问
+console.log(fruits.indexOf('watermelon'))
+
+//object
+const gong = {
+    mz: 'gyh',
+    sex: 'girl',
+    hobbies: ['eat','sleep'],
+    address:{
+        state: 'ZHINa',//记得加这里的逗号
+        city: 'SZ'
+    }
+}
+
+console.log(gong.mz,gong.address)//'dictname'.keyname（容易忘记写dn）
+console.log(gong.hobbies[0]) //访问内嵌数组
+console.log(gong.address.city)
+
+gong.email = 'nidie@gmail.com'//add attribute
+console.log(gong)
+
+const todos = [
+    {
+        id : 1,
+        text: 'throw myself',
+        isCompleted: true
+    },//记得数组元素之间加逗号
+    {
+        id : 2,
+        text: 'kill my boss',
+        isCompleted: true
+    },
+    {
+        id : 3,
+        text: 'go to hell',
+        isCompleted: false
+    }
+    
+]
+
+console.log(todos[1].text)
+
+//转换成JSON格式
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON)
+
+//for loop
+for(let i =0; i<10; i++){
+    console.log(`for loop number:${i}`)
+}
+
+//while
+let i = 0;
+while(i<0){
+    console.log(`while loop number:${i}`)
+    i++;
+}
+
+//遍历 Array
+for(let todo of todos){
+    console.log(todo)
+}
+
+//iteration with array:
+//forEach,map,filter
+todos.forEach(function(todo) {
+    console.log(todo.text);
+})
+
+const todoId = todos.map(function(todo) {
+    return todo.id;
+})
+
+console.log(todoId)
+
+//filter不是很懂
+
+//condition
+const o = 10
+
+if(o === 10) {
+    console.log('o is 10')
+} else if(o>10) {
+    console.log('x>10')
+} else {
+    console.log('o is not 10')
+}// 三个等于就要判断数据类型了
+
+const qw = 2;
+const po = 3
+
+if(qw > 1 || po > 2) {
+    console.log('youknowyouareright')
+}//  ||isor  &&isand
+ 
+const x2 = 5
+
+const color = x2 >10 ? 'red' :'blue'
+console.log(color)
+//三元操作符 ？：
+
+//another condition 
+switch(color) {
+    case 'red':
+        console.log('is red')
+        break
+    case'blue':
+        console.log('is blue')
+        break
+    default:
+        console.log('none of them')
+        break
+}
+
+
+//function
+// function addNums(num1 = 1,num2 = 1) {
+//     return num1 + num2
+// }
+
+// console.log(addNums(5,5))
+
+// same function in 箭头写法
+const addNums2 = (num3 = 1, num4 = 1) => console.log(num3 + num4);
+
+// constructor function
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+    // 把字符串日期变成date对象 可以显示真正的时间
+    this.getBirthYear = function () {
+        return this.dob.getFullYear()
+    //类方法
+    }
+}
+
+Person.prototype.getBirthYear = function() {
+    return this.dob.getFullYear()
+}
+
+Person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`
+}
+
+//class 和上面一样
+// class Person {
+//     constructor(firstName, lastName, dob) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.dob = new Date(dob);
+//     }
+// }
+
+//     getBirthYear() {
+//         return this.dob.getFullYear()
+//     }
+
+// 实例化
+const person1 = new Person('john','bob','1998-4-1')
+
+console.log(person1)
+console.log(person1.dob)
+console.log(person1.dob.getDate()) // 可以对date对象进行不同操作
+console.log(person1.getBirthYear())//调用类方法
+
+console.log(person1.getFullName())
+
+    </script>
+</body>
+</html>

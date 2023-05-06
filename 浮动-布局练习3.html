@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 1226px;
+            height: 615px;
+            margin: 0 auto;
+            background-color: royalblue;
+        }
+
+        .left {
+            width: 234px;
+            height: 615px;
+            background-color: slateblue;
+            float: left;
+
+        }
+
+        .right {
+            width: 992px;
+            /* 992+234 = 1226 */
+            height: 615px;
+            background-color: skyblue;
+            float: left;
+        }
+
+        .right>div {
+            width: 234px;
+            height: 300px;
+            background-color: white;
+            float: left;
+            margin-left: 14px ;
+            margin-bottom: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 设计思路
+1.一个大盒子框住all
+2.大盒里俩个小 一左一右
+  创建小盒子的时候先不用量边距什么的 width就按填满1+1=2的大小
+  height和大的一样
+3.右边的里面又有小盒子 -->

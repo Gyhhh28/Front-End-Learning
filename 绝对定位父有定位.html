@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yeye {
+            position: relative;
+            width: 800px;
+            height: 700px;
+            background-color: blanchedalmond;
+            padding: 50px;
+        }
+
+        .son {
+            position: absolute;
+            top: 0;
+            left: 30px;
+            width: 120px;
+            height: 120px;
+            background-color: royalblue;
+        }
+
+        .fath {
+            /* position: relative; */
+            /* 给父亲加定位（什么定位都行 从而约束子元素在父亲里面 */
+             /* 如果父元素没有定位 那就找爷爷辈 */
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="yeye">
+        <div class="fath">
+            <div class="son"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: 0;
+        }
+        .all {
+            width: 500px;
+            height: 200px;
+            padding: 7px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            position: relative;
+        }
+        .screen {
+            width: 500px;
+            height: 200px;
+            overflow: hidden;
+            /* 溢出隐藏 图片叠在一起*/
+            position: relative;
+        }
+        .screen ul{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3000px;
+        }
+        .screen li {
+            width: inherit;
+            height: inherit;
+            overflow: hidden;
+            float: left;
+            /* 让他们排成一列 */
+        }
+        .all ol{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            text-align: center;
+        }
+        .all ol li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 1px solid #fff;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .all ol li.current{
+            background-color: yellow;
+        }
+        #arr{
+            display: none;
+
+        }
+        #arr span{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            /* 浮在上面 用绝对 */
+            left: 5px;
+            top: 50%; 
+            /* 在all盒子高度的1/2处 */
+            margin-top: -20px;
+            background-color: black;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            opacity: .3;
+            border: 1px solid #fff;
+
+
+        }
+        #arr .right
+    </style>
+</head>
+<body>
+    <div class="all" id="box">
+        <div class="screen">
+            <ul>
+                <li><img src="images/mout.PNG" width="500px" height="200px"></img></li>
+                <li><img src="images/asas.JPG" width="500px" height="200px"</img></li>
+                <li><img src="images/baw.JPG" width="500px" height="200px"></img></li>
+                <li><img src="images/flow.JPG" width="500px" height="200px"></img></li>
+            </ul>
+
+            <ol>
+                <!-- 动态小方块 -->
+            </ol>
+        </div>
+
+        <div id="arr">
+            <span id="left">&lt</span>
+            <span id="right">&gt</span>
+        </div>
+    </div>
+</body>
+</html>

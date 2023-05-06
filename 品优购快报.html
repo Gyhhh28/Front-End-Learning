@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 248px;
+            height: 163px;
+            border: 1px solid #ccc;
+            margin: 100px auto; 
+            /* 盒子放在页面中央 */
+        }
+
+        .box h3 {
+            height: 32px;
+            border-bottom: 1px dotted #ccc;
+            font-weight: 400;
+            /* 取消标题加粗 */
+            line-height: 32px;
+            /* 文字垂直居中 */
+            padding-left: 15px; /*没有设置width 不会影响盒子大小*/
+            /* margin-left: 15px; 不行 
+            因为已经有了一个虚线的下边框 上盒子会和大盒子之间有距离 虚线不贴着左边了*/
+
+        }
+
+        .box ul li a {
+            font-size: 12px;
+            color: #666;
+            text-decoration: none;
+        
+        }
+
+        li {
+            list-style: none;
+            /* 去掉列表前面的圆点 */
+        }
+
+        .box ul li {
+            height: 23px;
+            line-height: 23px;
+            padding-left: 20px;
+            /* 无宽度 无影响 */
+            
+        }
+
+        .box ul {
+            margin-top: 7px;
+        }
+
+        .box a:hover {
+            text-decoration: underline ;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>品优购快报</h3>
+        <ul>
+            <li><a href="#">[特惠] 爆款耳机5折秒!</a></li>
+            <li><a href="#">[特惠] 母亲节，健康好礼低至5折!</a></li>
+            <li><a href="#">[特惠] 爆款耳机5折秒!</a></li>
+            <li><a href="#">[特惠] 9. 9元洗100张照片!</a></li>
+            <li><a href="#">[特惠] 长虹智能空调立省1000</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+<!-- 1. 上下盒子之间有一条线 可以给上盒子添加边框bottom
+ -->

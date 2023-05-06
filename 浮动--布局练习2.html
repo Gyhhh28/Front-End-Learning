@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 1226px;
+            height: 285px;
+            background-color: royalblue;
+            margin: 0 auto;
+            /* 盒子居中 */
+        }
+
+        .box li {
+            height: 285px;
+            width: 296px;
+            background-color: salmon;
+            float: left;
+            /* 为什么用浮动为不是变性为行内块？因为那样会有间距 */
+            margin-right: 14px;
+        }
+        /* 做到以上 第四个盒子从大盒子里掉了出来 因为装不下
+        所以要单独对他进行修改 */
+        .box .lst {
+            margin-right: 0;
+            /* 只写.lst无法拯救掉下去的第四个 因为.lst权重小于.box li */
+            /* 正确应该.box .lst 20>11 */
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="lst">4</li>
+
+    </ul>
+</body>
+</html>
